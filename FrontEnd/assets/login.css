@@ -61,3 +61,10 @@ form{
 body{
     background-color:#fffef8;
 }
+
+#error{
+    display: none;
+    text-align:center;
+    padding: 1rem;
+    color: red;
+}

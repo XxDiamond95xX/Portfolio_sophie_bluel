@@ -10,3 +10,5 @@ router.get('/', workCtrl.findAll);
 router.delete('/:id', auth, workCtrl.delete);
 
 module.exports = router;
+
+fetch("http://localhost:5678/api/works");
