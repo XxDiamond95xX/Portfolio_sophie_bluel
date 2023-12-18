@@ -1,0 +1,183 @@
+* {
+  box-sizing: border-box;
+}
+
+/* Style pour la modale */
+.modal {
+  display: none; /* Par défaut, la modale est cachée */
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2); /* Fond semi-transparent */
+  overflow: auto;
+}
+
+/* Style pour le contenu de la modale */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 950px;
+}
+
+/* Style pour le bouton de fermeture */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  position: relative;
+  bottom: 6rem;
+  left: 23rem;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+img{
+  width: 100%;
+}
+
+.modal-gallery{
+  display:grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+  width: 75%;
+  padding-bottom: 4rem;
+  border-bottom: #888 solid;
+}
+
+.modal-content h2{
+  margin-top: 2.5rem;
+  color: black;
+  font-size: 1.5rem;
+  font-family: 'Work Sans', sans-serif;
+}
+
+.addcontent{
+  padding: 1rem;
+}
+
+.addcontent > .button{
+  font-size: 1.2rem;
+  width: 20rem;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.modal_add_photo{
+  height:20rem;
+}
+
+.close_add_photo{
+  left: 24.5rem;
+  bottom: 9rem;
+}
+
+.fa-arrow-left{
+  font-size: 1.5rem;
+}
+
+.return_btn{
+  position: relative;
+  right: 24.5rem;
+}
+
+.add_photo_container{
+  width: 420px;
+  height: 215px;
+  background-color: #E8F1F6;
+  margin: 0;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.add_photo_content form{
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+#addtxt{
+  height: 3rem;
+  border: none;
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+  width: 26rem;
+}
+.add_photo_content .add_btn{
+	height: 2.5rem;
+	cursor: pointer;
+  width: 20rem;
+  background-color:#a7a7a7;
+  border: none;
+  margin-top: 3rem;
+}
+
+label{
+	margin: 0.5rem;
+}
+.form_container{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.fa-image{
+font-size: 5rem;
+color: #B9C5CC;
+
+}
+
+.add_photo_container input{
+  visibility: hidden;
+ 
+}
+
+.add_photo_container > form{
+border-bottom: none; 
+padding: 0;
+}
+
+form span{
+  position: relative;
+  top: 1rem;
+  border:solid#CBD6DC;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  color: #306685;
+  background-color:#CBD6DC;
+  cursor: pointer;
+}
+
+.add_photo_container p{
+position: relative;
+bottom: 2rem;
+font-size: 10px;
+}
+
+#categorySelect{
+  background-color: white;
+  border: none;
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+  height: 3rem;
+  cursor: pointer;
+}
+
+.form_txt{
+  padding-bottom: 4rem;
+  border-bottom: #a7a7a7 solid;
+}

@@ -1,4 +1,6 @@
-
+html{
+    display:block;
+}
 
 .login_container{
     gap: 2rem;
@@ -67,4 +69,8 @@ body{
     text-align:center;
     padding: 1rem;
     color: red;
+}
+
+a{
+    text-decoration: none;
 }

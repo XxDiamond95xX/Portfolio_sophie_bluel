@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
       email: email,
       password: password
     };
-
+    
     // Envoie les données au serveur
     fetch("http://localhost:5678/api/users/login", {
       method: "POST", //  envoi des données
@@ -31,6 +31,7 @@ document.addEventListener("DOMContentLoaded", function() {
       }
     })
     .then(data => { 
+      // Récupération du token dans le local storage 
       const token = data.token;
       window.localStorage.setItem("token", token);
       // Redirige vers la page index.html si la connexion est réussie
@@ -45,6 +46,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 });
+
 
 
 

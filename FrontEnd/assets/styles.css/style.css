@@ -28,6 +28,12 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+
+html{
+	display: flex;
+	justify-content: center;
+}
+
 body {
 	line-height: 1;
 }
@@ -161,6 +167,11 @@ button:hover {
 	background-color: #1D6154;
 }
 
+ a{
+	text-decoration: none;
+	color: black;
+}
+
 .gallery {
 	width: 100%;
 	display: grid;
@@ -222,3 +233,23 @@ footer nav ul {
 	margin: 2em
 }
 
+.top_container{
+	display:flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.top_container button{
+	border-style: none;
+	padding: 0.5rem;
+	color: black;
+	font-size: 0.7rem;
+}
+
+.top_container button:hover{
+	background-color: white;
+}
+
+.mod{
+	display: none;
+}
