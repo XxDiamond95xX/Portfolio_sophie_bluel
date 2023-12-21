@@ -2,34 +2,59 @@
   box-sizing: border-box;
 }
 
-/* Style pour la modale */
+main{
+  background-color:#FFFEF8;
+}
+
+/* Style pour la modale  */
 .modal {
-  display: none; /* Par défaut, la modale est cachée */
+  display: none; 
   position: fixed;
   z-index: 1;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.2); /* Fond semi-transparent */
+  background-color: rgba(0, 0, 0, 0.2); 
   overflow: auto;
 }
 
-/* Style pour le contenu de la modale */
-.modal-content {
-  background-color: #fefefe;
-  margin: 15% auto;
-  padding: 20px;
-  border: 1px solid #888;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 950px;
-}
+ /* Style pour le contenu de la modale  */ 
+ .modal-content {
+   background-color: #fefefe;
+   margin: 15% auto;
+   padding: 20px;
+   border: 1px solid #888;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   max-width: 950px;
+  }
+  
+  .modal-content .deleteBtn{
+    border-radius: 0.2rem;
+    font-size: 1rem;
+    color: white;
+    background-color: black;
+    position: relative;
+    bottom: 10rem;
+    padding: 0.25rem;
+    left: 6rem;
+  }
 
-/* Style pour le bouton de fermeture */
-.close {
-  color: #aaa;
+  .modal-content .deleteBtn:hover{
+    background-color: black;
+  }
+  
+  .modal-content h2{
+    margin-top: 2.5rem;
+    color: black;
+    font-size: 1.5rem;
+    font-family: 'Work Sans', sans-serif;
+  }
+  
+  .close {
+    color: #aaa;
   float: right;
   font-size: 28px;
   font-weight: bold;
@@ -45,10 +70,6 @@
   cursor: pointer;
 }
 
-img{
-  width: 100%;
-}
-
 .modal-gallery{
   display:grid;
   grid-template-columns: repeat(5, 1fr);
@@ -58,12 +79,11 @@ img{
   border-bottom: #888 solid;
 }
 
-.modal-content h2{
-  margin-top: 2.5rem;
-  color: black;
-  font-size: 1.5rem;
-  font-family: 'Work Sans', sans-serif;
+img{
+  width: 100%;
 }
+
+/* Modale ajout de contenu */
 
 .addcontent{
   padding: 1rem;
@@ -94,63 +114,39 @@ img{
   right: 24.5rem;
 }
 
+.add_photo_content form{
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}  
+
+.form_container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .add_photo_container{
   width: 420px;
   height: 215px;
   background-color: #E8F1F6;
   margin: 0;
   margin-bottom: 1rem;
+  padding-bottom: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.add_photo_content form{
-  display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
-}
-
-#addtxt{
-  height: 3rem;
-  border: none;
-  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
-  width: 26rem;
-}
-.add_photo_content .add_btn{
-	height: 2.5rem;
-	cursor: pointer;
-  width: 20rem;
-  background-color:#a7a7a7;
-  border: none;
-  margin-top: 3rem;
-}
-
-label{
-	margin: 0.5rem;
-}
-.form_container{
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-}
+}  
 
 .fa-image{
-font-size: 5rem;
-color: #B9C5CC;
+  font-size: 5rem;
+  color: #B9C5CC;
+}  
 
-}
-
-.add_photo_container input{
-  visibility: hidden;
- 
-}
-
-.add_photo_container > form{
-border-bottom: none; 
-padding: 0;
-}
+label{
+  margin:1.5rem 0 0.5rem 0;
+}  
 
 form span{
   position: relative;
@@ -161,13 +157,31 @@ form span{
   color: #306685;
   background-color:#CBD6DC;
   cursor: pointer;
-}
+}  
 
 .add_photo_container p{
-position: relative;
-bottom: 2rem;
-font-size: 10px;
+  position: relative;  
+  top: 1rem;
+  font-size: 10px;
 }
+
+.add_photo_container input{
+  visibility: hidden;
+}  
+
+#imagePreview{
+  width: 11rem;
+  position: absolute;
+  display: none;
+  height: 13rem;
+}  
+
+#addtxt{
+  height: 3rem;
+  border: none;
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+  width: 26rem;
+}  
 
 #categorySelect{
   background-color: white;
@@ -175,9 +189,36 @@ font-size: 10px;
   box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
   height: 3rem;
   cursor: pointer;
+}  
+
+.btn_container{
+  display: flex;
+  Margin-top: 3rem;
+  border-top: solid #a7a7a7;
 }
 
-.form_txt{
-  padding-bottom: 4rem;
-  border-bottom: #a7a7a7 solid;
-}
+.add_photo_content .add_btn{
+  height: 2.5rem;
+	cursor: pointer;
+  width: 20rem;
+  background-color:#a7a7a7;
+  border: none;
+  margin-top: 3rem;
+}  
+
+.add_btn.valid{
+  background-color: #1D6154; 
+}  
+
+
+
+
+
+
+
+
+
+  
+
+
+

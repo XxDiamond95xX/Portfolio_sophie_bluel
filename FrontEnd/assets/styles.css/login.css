@@ -2,13 +2,38 @@ html{
     display:block;
 }
 
+body{
+    max-width: inherit;
+}
+
+main{
+    background-color: #FFFEF8;
+    padding-bottom: 3rem;
+}
+
+a{
+    color: black;
+}
+
+header{
+    padding: 50px;
+    margin: 0;
+}
+
+header a{
+    text-decoration: none;
+}
+
+#log{
+    font-weight: bold;
+}
+
 .login_container{
     gap: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
 
 .login_title{
     font-family: 'Syne', sans-serif;
@@ -19,32 +44,22 @@ html{
     justify-content: center;
 }
 
-.login p{
-    font-size: 1rem;
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+label{
+    margin-top: 2rem;
 }
 
 .login input{
     width: 379px;
     height: 51px;
-    margin: 1rem 0;
+    margin: 0.5rem 0;
     box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
     border-color: white;
     border: 0;
-}
-
-.login a{
-    margin: 1rem;
-    display: flex;
-    justify-content: center;
-}
-
-a{
-    color: black;
-}
-
-form{
-    display: flex;
-    flex-direction: column;
 }
 
 .login_btn{
@@ -53,6 +68,7 @@ form{
     align-self: center;
     background-color: #1D6154;
     color: white;
+    margin:2rem 0;
 }
 
 .login_btn:hover{
@@ -60,8 +76,10 @@ form{
     color: #1D6154;
 }
 
-body{
-    background-color:#fffef8;
+.login a{
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
 }
 
 #error{
@@ -71,6 +89,6 @@ body{
     color: red;
 }
 
-a{
-    text-decoration: none;
+form a {
+    text-decoration: underline;
 }

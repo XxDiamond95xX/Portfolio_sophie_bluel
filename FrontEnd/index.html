@@ -21,12 +21,12 @@
 				<li>projets</li>
 				<li>contact</li>
 				<li><a id="log" href="login.html">login</a></li>
-				<li><img src="./assets/icons/instagram.png" alt="Instagram"></li>
+				<li><img src="./assets/icons/instagram.png" id="instagram" alt="Instagram"></li>
 			</ul>
 		</nav>
 	</header>
 	<main>
-		<section id="introduction">
+		<div id="introduction">
 			<figure>
 				<img src="./assets/images/sophie-bluel.png" alt="photo de Sophie Bluel">
 			</figure>
@@ -36,7 +36,7 @@
 				<p>Chaque projet sera étudié en commun, de façon à mettre en valeur les volumes, les matières et les couleurs dans le respect de l’esprit des lieux et le choix adapté des matériaux. Le suivi du chantier sera assuré dans le souci du détail, le respect du planning et du budget.</p>
 				<p>En cas de besoin, une équipe pluridisciplinaire peut-être constituée : architecte DPLG, décorateur(trice)</p>
 			</article>
-		</section>
+		</div>
 		<section id="portfolio">
 			<div class="top_container">
 				<h2 class="project">Mes Projets</h2>
@@ -44,8 +44,8 @@
 					<i class="fa-regular fa-pen-to-square"></i>
 				</button>
 				<p class="mod">modifier</p>
-				<div id="myModal" class="modal">
-					<div class="modal-content">
+				<aside id="myModal" class="modal">
+					<section class="modal-content">
 					  	<div>
 							<h2>Galerie photo</h2>
 					  		<span class="close">&times;</span>
@@ -54,36 +54,38 @@
 						<div class="addcontent">
 							<input type="submit" class="button" value="Ajouter une photo">
 						</div>
-					</div>  
-				</div>			  
-				<div id="myModalAddPhoto" class="modal modal-add-photo">
-					<div class="modal-content add_photo_content">
-					  <div>
-						<button class="return_btn"><i class="fa-solid fa-arrow-left"></i></button>
-						<h2>Ajout photo</h2>
-					  	<span class="close_add_photo close">&times;</span>
-					  </div>
-					  <div class="form_container">
-						<section class="add_photo_container">
-							<i class="fa-regular fa-image"></i>
-							<form action="/upload" method="post" enctype="multipart/form-data">
+					</section>  
+				</aside>			  
+				<aside id="myModalAddPhoto" class="modal modal-add-photo">
+					<section class="modal-content add_photo_content">
+						<div>
+							<button class="return_btn"><i class="fa-solid fa-arrow-left"></i></button>
+							<h2>Ajout photo</h2>
+						  	<span class="close_add_photo close">&times;</span>
+						</div>
+						<form id="myForm" action="/upload" method="post" enctype="multipart/form-data">
+							<div class="form_container">
+							  <div class="add_photo_container">
+								<i class="fa-regular fa-image"></i>
 								<label for="photo-upload">
-								  <span>+ Ajouter une photo</span>
+								  <span class="addSpan">+ Ajouter une photo</span>
 								</label>
-								<input type="submit" value="Envoyer">
-							</form>
-							<p>jpg, png : 4mo max</p>
-						</section>
-						<div class="form_container form_txt">
-							<label for="title">Titre</label>
-							<input type="text" name="titre" id="addtxt">
-							<label for="categorySelect">Catégorie</label>
-							<select id="categorySelect"></select>
-						</div>						
-						<input class="add_btn" type="submit" value="Valider">
-					  </div> 
-					</div>
-				</div>
+								<input id="photo-upload" type="file" name="photo">
+								<p>jpg,png : 4mo max</p>
+								<!-- Ajout de l'élément d'aperçu -->
+								<img id="imagePreview" src="#" alt="Prévisualisation de l'image">
+							  </div>
+							  <label for="addtxt">Titre</label>
+							  <input type="text" name="title" id="addtxt" required>
+							  <label for="categorySelect">Catégorie</label>
+							  <select id="categorySelect"></select>
+							  <div class="btn_container">
+								<input class="add_btn" type="submit" value="Valider">
+							  </div>
+							</div>
+						</form>												  
+					</section>
+				</aside>
 			</div>
 			<div class="filter">
 				<button class="main">Tous</button>
