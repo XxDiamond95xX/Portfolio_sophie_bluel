@@ -128,11 +128,10 @@ img{
 
 .add_photo_container{
   width: 420px;
-  height: 215px;
+  height: 252px;
   background-color: #E8F1F6;
   margin: 0;
   margin-bottom: 1rem;
-  padding-bottom: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -173,7 +172,7 @@ form span{
   width: 11rem;
   position: absolute;
   display: none;
-  height: 13rem;
+  height: 252px;
 }  
 
 #addtxt{
@@ -210,6 +209,10 @@ form span{
   background-color: #1D6154; 
 }  
 
+
+.form_txt{
+  padding-bottom: 4rem;
+  border-bottom: #a7a7a7 solid;}
 
 
 

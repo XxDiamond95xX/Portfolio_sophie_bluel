@@ -38,11 +38,11 @@ document.addEventListener("DOMContentLoaded", function() {
       window.location.href = "index.html";
     })
     .catch(error => {
-      // Affiche les erreurs qui pourraient survenir lors de la requête
+    
       // Afficher l'élément d'erreur
       errorMsg.style.display = "block";
       console.error("Erreur lors de la tentative de connexion :", error);
-      // Gérer les erreurs de connexion ici si nécessaire
+
     });
   });
 });
