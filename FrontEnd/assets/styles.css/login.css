@@ -92,3 +92,10 @@ label{
 form a {
     text-decoration: underline;
 }
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+  
