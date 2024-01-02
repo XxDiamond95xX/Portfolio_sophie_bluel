@@ -81,7 +81,7 @@ function fetchCategories() {
     const logOut = document.getElementById("log");
     const galleryTitle = document.querySelector(".project");
     const modElements = document.querySelectorAll(".mod"); // Sélectionne tous les éléments avec la classe 'mod'
-  
+    const editionBar = document.querySelector(".edition-bar")
     const token = window.localStorage.getItem('token'); // Récupère le token du stockage local
   
     if (token) {
@@ -90,7 +90,7 @@ function fetchCategories() {
         element.style.display = 'flex';
       });
     }
-  
+    editionBar.style.display = 'flex'
     logOut.textContent = 'logout';
     buttonsContainer.style.display = 'none';
     galleryTitle.style.margin = '5rem 1rem';
