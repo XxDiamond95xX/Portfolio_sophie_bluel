@@ -127,7 +127,7 @@ function fetchCategories() {
       deleteButton.addEventListener('click', function() {
         const workId = work.id;
         const token = window.localStorage.getItem('token'); // Récupère le token du localStorage
-  
+
         // Requête DELETE vers l'API pour supprimer le projet avec le token d'authentification
         fetch(`http://localhost:5678/api/works/${workId}`, {
           method: 'DELETE',
@@ -141,6 +141,7 @@ function fetchCategories() {
             }
             // Si la suppression est réussie du côté de l'API, supprime visuellement l'élément figure correspondant au projet dans la modale
             figureElement.remove();
+            fetchWork();
           })
           .catch(error => {
             console.error('Erreur lors de la suppression du projet:', error);

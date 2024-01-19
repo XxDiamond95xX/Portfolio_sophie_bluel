@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function() {
     .catch(error => {
     
       // Afficher l'élément d'erreur
-      errorMsg.style.display = "block";
+       errorMsg.style.display = "block";
       console.error("Erreur lors de la tentative de connexion :", error);
 
     });
